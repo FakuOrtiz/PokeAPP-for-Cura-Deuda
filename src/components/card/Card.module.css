@@ -3,10 +3,14 @@
   font-size: 1rem;
 }
 
-img {
+.imgPoke {
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 1));
   width: 140px;
-  height: 250px;
+  height: 210px;
+}
+
+p::first-letter {
+  text-transform: capitalize;
 }
 
 /*------------------------- CONTAINER CARD ----------------------------------- */
@@ -114,6 +118,28 @@ img {
   border-radius: 10px;
   text-align: center;
   background-color: #9699e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.containerFighting {
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #d1907e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.containerPsychic {
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #e99cbe;
   display: flex;
   flex-direction: column;
   align-items: center;
