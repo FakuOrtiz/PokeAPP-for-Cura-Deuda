@@ -27,10 +27,10 @@ export default data.reducer;
 
 export const getData = () => async (dispatch) => {
   try {
-    const { data: p } = await axios.get(`${API_URL}?limit=151`);
+    const { data } = await axios.get(`${API_URL}?limit=151`);
 
     let urls = [];
-    p.results?.map((p) => urls.push(p.url));
+    data.results?.map((p) => urls.push(p.url));
 
     Promise.all(urls)
       .then((res) => {

@@ -24,10 +24,4 @@
   border: none;
   background: #948e8e;
   color: white;
-  transition: .3s;
-}
-
-.goBack:hover {
-  padding: 15px;
-  border-radius: 20px;
 }

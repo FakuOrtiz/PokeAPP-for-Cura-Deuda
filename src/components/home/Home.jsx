@@ -8,6 +8,10 @@ const Home = () => {
   const { pokemons, pokemon } = useSelector((state) => state.data);
   const dispatch = useDispatch();
 
+  const copyPokemons = [...pokemons];
+
+  copyPokemons?.sort((a, b) => a.id - b.id);
+
   const handleGoBack = () => {
     dispatch(clearPokemon());
   };
@@ -44,7 +48,7 @@ const Home = () => {
   return (
     <div>
       <div className={styles.containerCard}>
-        {pokemons?.map((p) => {
+        {copyPokemons.map((p) => {
           return (
             <Card
               key={p.name}
