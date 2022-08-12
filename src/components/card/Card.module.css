@@ -1,6 +1,121 @@
+.name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+img {
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 1));
+  width: 140px;
+  height: 250px;
+}
+
+/*------------------------- CONTAINER CARD ----------------------------------- */
+
 .containerCard {
-    height: 250px;
-    border: 1px solid black;
-    border-radius: 10px;
-    text-align: center;
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.containerFire {
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f6a08e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.6);
+}
+.containerWater {
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #83b5e4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.containerGrass {
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #78b197;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.containerElectric {
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffff00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.containerBug {
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #d9d884;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.containerNormal {
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #c0bcb1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.containerPoison {
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #e489c7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.containerGround {
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fbd68c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.containerGhost {
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #9699e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.6);
 }
