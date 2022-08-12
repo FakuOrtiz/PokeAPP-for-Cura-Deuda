@@ -35,7 +35,7 @@ const Card = ({
             <div>
               <img src={image} alt={name} className={styles.imgPoke} />
             </div>
-            <div className={styles.name}>{name.toUpperCase()}</div>
+            <div className={styles.name}>{name?.toUpperCase()}</div>
             <div>
               {types?.map((t) => {
                 return <p key={t}>{t}</p>;
@@ -49,7 +49,7 @@ const Card = ({
             <div>
               <h2 className={styles.id}>{`#${id}`}</h2>
             </div>
-            <div className={styles.name}>{name.toUpperCase()}</div>
+            <div className={styles.name}>{name?.toUpperCase()}</div>
             <div className={styles.containerTypes}>
               {types?.map((t) => {
                 return <p key={t}>{t}</p>;

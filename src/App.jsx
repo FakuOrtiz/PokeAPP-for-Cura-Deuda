@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { getData } from "./redux/slices/data";
 
 function App() {
-  const { pokemons, pokemon } = useSelector((state) => state.data);
+  const { pokemons } = useSelector((state) => state.data);
   const dispatch = useDispatch();
 
   useEffect(() => {
