@@ -1,9 +1,7 @@
 import React from "react";
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { clearPokemon, getData } from "../../redux/slices/data";
+import { clearPokemon } from "../../redux/slices/data";
 import Card from "../card/Card";
-import Loading from "../loading/Loading";
 import styles from "./Home.module.css";
 
 const Home = () => {
@@ -18,22 +16,26 @@ const Home = () => {
     return (
       <div>
         <div>
-          <button onClick={handleGoBack}>Go back</button>
+          <button className={styles.goBack} onClick={handleGoBack}>
+            Go back
+          </button>
         </div>
-        <div className={styles.containerCard}>
-          <Card
-            key={pokemon.name}
-            id={pokemon.id}
-            name={pokemon.name}
-            hp={pokemon.hp}
-            attack={pokemon.attack}
-            defense={pokemon.defense}
-            speed={pokemon.speed}
-            height={pokemon.height}
-            weight={pokemon.weight}
-            image={pokemon.image}
-            types={pokemon.types}
-          />
+        <div className={styles.containerIndividual}>
+          <div className={styles.containerOneCard}>
+            <Card
+              key={pokemon.name}
+              id={pokemon.id}
+              name={pokemon.name}
+              hp={pokemon.hp}
+              attack={pokemon.attack}
+              defense={pokemon.defense}
+              speed={pokemon.speed}
+              height={pokemon.height}
+              weight={pokemon.weight}
+              image={pokemon.image}
+              types={pokemon.types}
+            />
+          </div>
         </div>
       </div>
     );

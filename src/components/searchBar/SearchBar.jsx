@@ -26,7 +26,9 @@ const SearchBar = () => {
             type="text"
             onChange={(e) => setName(e.target.value)}
           />
-          <button type="submit">Buscar</button>
+          <button type="submit" className={styles.submit}>
+            Search
+          </button>
         </form>
       </div>
     </div>

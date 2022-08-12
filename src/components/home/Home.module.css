@@ -2,5 +2,32 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 3rem;
-  margin: 4rem 1rem;
+  margin: 8rem 1rem 2rem 1rem;
+}
+
+.containerIndividual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerOneCard {
+  margin: 1rem;
+  width: 250px;
+}
+
+.goBack {
+  margin: 100px 0 20px 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  background: #948e8e;
+  color: white;
+  transition: .3s;
+}
+
+.goBack:hover {
+  padding: 15px;
+  border-radius: 20px;
 }
