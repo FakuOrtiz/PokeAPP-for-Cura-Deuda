@@ -13,9 +13,6 @@ const Home = () => {
     dispatch(getData());
   }, []);
 
-
-  console.log(pokemons)
-
   return (
     <div>
       <div className={styles.containerCard}>
