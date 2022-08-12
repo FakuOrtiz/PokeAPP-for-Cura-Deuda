@@ -13,6 +13,39 @@ p::first-letter {
   text-transform: capitalize;
 }
 
+/*------------------------- CONTAINER INFO ----------------------------------- */
+
+.containerInfo {
+  display: flex;
+  width: 70%;
+  height: 50%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.infoSide {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.subtitle {
+  font-weight: bold;
+}
+
+.containerTypes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+}
+
+.id {
+  margin: 10px 0;
+}
+
 /*------------------------- CONTAINER CARD ----------------------------------- */
 
 .containerCard {
