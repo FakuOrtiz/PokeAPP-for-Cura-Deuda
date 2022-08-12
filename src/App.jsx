@@ -1,15 +1,31 @@
-import './App.css'
-import Home from './components/home/Home'
-import SearchBar from './components/searchBar/SearchBar'
+import "./App.css";
+import Home from "./components/home/Home";
+import Loading from "./components/loading/Loading";
+import SearchBar from "./components/searchBar/SearchBar";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { getData } from "./redux/slices/data";
 
 function App() {
+  const { pokemons, pokemon } = useSelector((state) => state.data);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getData());
+  }, []);
 
   return (
     <div className="App">
-      <SearchBar />
-      <Home />
+      {pokemons?.length < 151 ? (
+        <Loading />
+      ) : (
+        <>
+          <SearchBar />
+          <Home />
+        </>
+      )}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

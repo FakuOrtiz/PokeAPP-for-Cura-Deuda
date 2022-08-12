@@ -1,9 +1,36 @@
-import React from 'react'
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { searchPoke } from "../../redux/slices/data";
+import styles from "./SearchBar.module.css";
 
 const SearchBar = () => {
-  return (
-    <div>SearchBar</div>
-  )
-}
+  let [name, setName] = useState("");
 
-export default SearchBar
+  const dispatch = useDispatch();
+
+  const handleSearch = (name) => {
+    dispatch(searchPoke(name));
+  };
+
+  return (
+    <div className={styles.containerSearchBar}>
+      <div className={styles.containerForm}>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSearch(name);
+          }}
+        >
+          <input
+            placeholder="Search pokemon..."
+            type="text"
+            onChange={(e) => setName(e.target.value)}
+          />
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default SearchBar;

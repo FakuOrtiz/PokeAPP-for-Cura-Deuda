@@ -1,17 +1,43 @@
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getData } from "../../redux/slices/data";
+import { clearPokemon, getData } from "../../redux/slices/data";
 import Card from "../card/Card";
+import Loading from "../loading/Loading";
 import styles from "./Home.module.css";
 
 const Home = () => {
-  const { pokemons } = useSelector((state) => state.data);
+  const { pokemons, pokemon } = useSelector((state) => state.data);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getData());
-  }, []);
+  const handleGoBack = () => {
+    dispatch(clearPokemon());
+  };
+
+  if (pokemon?.name) {
+    return (
+      <div>
+        <div>
+          <button onClick={handleGoBack}>Go back</button>
+        </div>
+        <div className={styles.containerCard}>
+          <Card
+            key={pokemon.name}
+            id={pokemon.id}
+            name={pokemon.name}
+            hp={pokemon.hp}
+            attack={pokemon.attack}
+            defense={pokemon.defense}
+            speed={pokemon.speed}
+            height={pokemon.height}
+            weight={pokemon.weight}
+            image={pokemon.image}
+            types={pokemon.types}
+          />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -19,6 +45,7 @@ const Home = () => {
         {pokemons?.map((p) => {
           return (
             <Card
+              key={p.name}
               id={p.id}
               name={p.name}
               hp={p.hp}

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Card.module.css";
+import { typeColor } from "../../utils/Functions";
 
 const Card = ({
   id,
@@ -14,36 +15,18 @@ const Card = ({
   types,
 }) => {
   return (
-    <div
-      className={
-        types?.includes("fire")
-          ? styles.containerFire
-          : types?.includes("water")
-          ? styles.containerWater
-          : types?.includes("grass")
-          ? styles.containerGrass
-          : types?.includes("electric")
-          ? styles.containerElectric
-          : types?.includes("bug")
-          ? styles.containerBug
-          : types?.includes("normal")
-          ? styles.containerNormal
-          : types?.includes("poison")
-          ? styles.containerPoison
-          : types?.includes("ground")
-          ? styles.containerGround
-          : styles.containerNormal
-      }
-    >
+    <div className={typeColor(types)}>
       <div>
         <h2>#{id}</h2>
       </div>
       <div>
-        <img
-          src={image}
-          alt={name}
-        />
-        <div className={styles.name}>{name.toUpperCase()}</div>
+        <img src={image} alt={name} className={styles.imgPoke} />
+      </div>
+      <div className={styles.name}>{name.toUpperCase()}</div>
+      <div>
+        {types?.map((t) => {
+          return <p key={t}>{t}</p>;
+        })}
       </div>
     </div>
   );
