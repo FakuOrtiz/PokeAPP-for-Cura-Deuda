@@ -18,17 +18,22 @@ function App() {
 
   return (
     <div className="App">
-      {pokemons?.length < 151 ? (
+      {pokemons?.length < 50 ? (
         <Loading />
       ) : (
         <>
           <NavBar />
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/aboutMe">
-            <AboutMe />
-          </Route>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/aboutMe">
+              <AboutMe />
+            </Route>
+            <Route path="*">
+              <Home />
+            </Route>
+          </Switch>
         </>
       )}
     </div>
