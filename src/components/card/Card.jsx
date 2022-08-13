@@ -30,7 +30,7 @@ const Card = ({
         <div onClick={handleClick} style={{ cursor: "pointer" }}>
           <div className={typeColor(types)}>
             <div>
-              <h2>{`#${id}`}</h2>
+              <h2 className={styles.id}>{`#${id}`}</h2>
             </div>
             <div>
               <img src={image} alt={name} className={styles.imgPoke} />
