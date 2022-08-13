@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      {pokemons?.length < 20 ? (
+      {pokemons?.length < 151 ? (
         <Loading />
       ) : (
         <>
