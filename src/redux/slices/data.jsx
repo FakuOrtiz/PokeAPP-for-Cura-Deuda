@@ -27,7 +27,7 @@ export default data.reducer;
 
 export const getData = () => async (dispatch) => {
   try {
-    const { data } = await axios.get(`${API_URL}?limit=151`);
+    const { data } = await axios.get(`${API_URL}`);
 
     let urls = [];
     data.results?.map((p) => urls.push(p.url));
