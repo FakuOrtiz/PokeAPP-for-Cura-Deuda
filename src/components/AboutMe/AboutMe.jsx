@@ -27,7 +27,7 @@ const AboutMe = () => {
               And you can contact me on{" "}
               <a
                 className={styles.social}
-                href="https://www.linkedin.com/in/facundortiz/"
+                href="https://www.linkedin.com/in/fakuortiz/"
                 target="_blank"
               >
                 Linkedin.
